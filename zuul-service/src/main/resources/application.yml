@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone         : http://localhost:9001/eureka/
+server:
+  port                    : 9005
+  contextPath             : /zuul
+  servlet-path            : /zuul
+spring:
+  application:
+    name                  : zuul-service
+zuul:
+  routes:
+    feign:
+      path: /feign/**
+      serviceId: feign-service
+    eureka:
+      path: /eureka/**
+      serviceId: eureka-service
