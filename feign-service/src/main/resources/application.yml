@@ -9,6 +9,8 @@ server:
 spring:
   application:
     name                  : feign-service
+  zipkin:
+    base-url              : http://localhost:9006
 
 feign:
   hystrix:

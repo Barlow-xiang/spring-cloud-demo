@@ -3,4 +3,5 @@ include 'eureka-server'
 include 'eureka-client'
 include 'feign-service'
 include 'zuul-service'
+include 'zipkin-server'
 

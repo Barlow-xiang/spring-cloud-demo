@@ -9,6 +9,8 @@ server:
 spring:
   application:
     name                  : zuul-service
+  zipkin:
+    base-url              : http://localhost:9006
 zuul:
   routes:
     feign:
