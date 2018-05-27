@@ -11,3 +11,14 @@ spring:
     name                : eureka-service
   zipkin:
     base-url            : http://localhost:9006
+  datasource:
+      first:
+        jdbcUrl         : jdbc:mysql://localhost:3306/test1?characterEncoding=utf-8
+        username        : root
+        password        : 'root'
+        driverClassName : com.mysql.cj.jdbc.Driver
+      second:
+        jdbcUrl         : jdbc:mysql://localhost:3306/test2?characterEncoding=utf-8
+        username        : root
+        password        : 'root'
+        driverClassName : com.mysql.cj.jdbc.Driver
