@@ -1,6 +1,5 @@
 package com.spring.cloud.eureka.client.controller;
 
-import com.spring.cloud.eureka.client.service.IOrderService;
 import com.spring.cloud.eureka.client.service.IUserService;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,13 @@ public class UserController {
     @ResponseBody
     public String getUser(@PathVariable("id") Integer id) {
         logger.info("call get user. id={}", id);
-        String userName = userService.getUser(id);
-        return userName;
+        return userService.getUser(id);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/lock")
+    @ResponseBody
+    public String lock() {
+        logger.info("call redis lock.");
+        return userService.lock();
     }
 }
