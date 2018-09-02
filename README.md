@@ -10,3 +10,4 @@
  1.搭建了Eureka, Hystrix, Zuul, OpenFeign 框架。 <br>
  2.多数据源支持(Multi-data source support)。 <br>
  3.redis缓存及redis分布式锁(redis cache and redis distributed lock)。 <br>
+ 4.Spring AOP logger demo。 <br>
